@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SVG File page</title>
+    </head>
+    <body>
+        <hr>
+        <input type="text" id="txtName">
+        <button onclick="onSetData()">Set Data</button>
+        <hr>
+        <div id="result"></div>
+        <script>
+            function onSetData(){
+                if(typeof(Storage)!=="undefined"){
+                    var txtInput = document.getElementById("txtName");
+                    var name = txtName.value;
+                    localStorage.setItem("person",name);
+
+                }else{
+                    var divid = document.getElementById("result");
+                    divid.innerHTML = "Sorry"
+                }
+
+            }
+        </script>
+    </body>
+</html>

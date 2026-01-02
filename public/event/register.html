@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+</head>
+<body>
+        <h1>Register Page</h1>
+        <hr>
+        <label>User Name:</label>
+        <input type="text" id="userName" name="username" required>
+        <label>Password</label>
+        <input type="password" id="userPassword" placeholder="Enter your password" required>
+        <br>
+        <hr>
+        <button onclick="onRegister()">Register</button>
+        <script>
+            var onRegister = function(){
+                if(typeof(Storage)!=="undefined"){
+                    var txtUserName = document.getElementById("userName");
+                    var userName = txtUserName.value;
+                    // Corrected ID: changed "password" to "userPassword"
+                    var txtPassword = document.getElementById("userPassword");
+                    var Password = txtPassword.value;
+                    var validUser = {
+                        "username":userName,
+                        "password":Password
+                    }
+                    localStorage.setItem("validUser", JSON.stringify(validUser));
+                }else{
+                    var divid = document.getElementById("result");
+                    divid.innerHTML = "Sorry"
+                }
+            }
+        </script>    
+</body>
+</html>

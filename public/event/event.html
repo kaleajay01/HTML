@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        This is Home Page of Ajay Kale Graphics
+    </title>
+</head>
+<body style="text-align:center;">
+    <a href="event.html">Event</a> |
+    <a href="login.html">Login Page</a>
+    <hr>
+    <button id="eventBtc">Click Me</button>
+    <p id="par">Hello from btn</p>
+    <hr>
+    <p id="mouseDown"></p>
+    <p id="mouseMove"></p>
+    <p id="mouseUp"></p>
+    <hr>
+    <p>Select a Card Designfrom the list.</p>
+    <select id="mySelect" onchange="myList()">
+        <option value="Card">Wedding Crad</option>
+        <option value="Card">Invitation Card</option>
+        <option value="Card">Gritting Card</option>
+        <option value="Card">Poster</option>
+    </select><br><br>
+    <hr>
+
+    <!-- copy text input -->
+    <input type="text" oncopy="myFunction()" value="Try to copy this text"><br>
+    <p id="demo"></p>
+    <hr>
+
+    <!-- in input box the text is always uppercase -->
+    This text is always UPPERCASE: <input type="text" id="fname" onblur="myFunction1()"><br>
+    <hr>
+    <script>
+        var btn = document.getElementById("eventBtc");
+        btn.addEventListener("click", displayData);
+        document.addEventListener("mousedown", onMouseDown)
+        document.addEventListener("mouseup", onMouseUp)
+        document.addEventListener("mousemove", onMouseMove)
+        //keyboard key press event
+        document.addEventListener("keypress",onKeyPress)
+
+        function displayData() {
+            document.getElementById("par").innerHTML = Date();
+        };
+        function onMouseDown(event){
+            console.log("MouseDown")
+            let x = event.clientX;
+            let y = event.clientY;
+            let coords = x + "," + y;
+            document.getElementById("mouseDown").innerHTML = "MouseDown " +coords;
+        };
+        function onMouseMove(event){
+            console.log("Mouse Move")
+            if (event.buttons === 1) { 
+                let x = event.clientX;
+                let y = event.clientY;
+                let coords = x + "," + y;
+                document.getElementById("mouseMove").innerHTML = "MouseMove " +coords;                
+            }           
+        };
+        function onMouseUp(event){
+            console.log("MouseUp")
+            let x = event.clientX;
+            let y = event.clientY;
+            let coords = x + "," + y;
+            document.getElementById("mouseUp").innerHTML = "MouseUp " +coords;
+        };
+        //KeyBoard Key Press event
+        function onKeyPress(){
+            console.log("Keyboard Key Press")
+        };        
+        //display the text is copied
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "You copied text!";
+        };
+        //text upper case funcion
+        function myFunction1() {
+            let letter = document.getElementById("fname");
+            letter.value = letter.value.toUpperCase();
+        };
+    </script>
+</body>
+</html>
