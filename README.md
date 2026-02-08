@@ -19,19 +19,3 @@ HTML describes the **structure of a webpage** using elements and tags.
 - It works together with CSS and JavaScript
 
 ---
-
-## 🧱 HTML Structure
-
-A basic HTML document looks like this:
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>My First Page</title>
-  </head>
-  <body>
-    <h1>Hello World</h1>
-    <p>This is my first HTML page.</p>
-  </body>
-</html>
