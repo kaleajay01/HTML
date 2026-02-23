@@ -7,8 +7,6 @@
 **HTML** stands for **HyperText Markup Language**.  
 It is the **standard markup language** used to create and structure web pages on the internet.
 
-HTML describes the **structure of a webpage** using elements and tags.
-
 ---
 
 ## 🌐 Why HTML is Important?
