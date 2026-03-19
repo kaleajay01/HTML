@@ -2,7 +2,6 @@
 
 # HTML Introduction
 
-## 📌 What is HTML?
 
 **HTML** stands for **HyperText Markup Language**.  
 It is the **standard markup language** used to create and structure web pages on the internet.
